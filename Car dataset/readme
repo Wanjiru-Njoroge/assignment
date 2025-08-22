@@ -1,3 +1,9 @@
+### Group 4
+Cameline Njoroge 
+Keffas Mutethia
+Derrick Okeya
+Issac Mumo
+
 # Car Price Prediction and Analysis
 
 This project analyzes and predicts used car prices using a dataset (`cardekho.csv`) and various machine learning techniques in a Jupyter Notebook ([test1ML.ipynb](test1ML.ipynb)). The workflow includes data cleaning, exploratory data analysis (EDA), feature engineering, and regression modeling (Linear, Ridge, Lasso, and Polynomial Regression).
