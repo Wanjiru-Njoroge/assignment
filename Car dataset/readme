@@ -1,0 +1,59 @@
+# Car Price Prediction and Analysis
+
+This project analyzes and predicts used car prices using a dataset (`cardekho.csv`) and various machine learning techniques in a Jupyter Notebook ([test1ML.ipynb](test1ML.ipynb)). The workflow includes data cleaning, exploratory data analysis (EDA), feature engineering, and regression modeling (Linear, Ridge, Lasso, and Polynomial Regression).
+
+## Project Structure
+
+- **cardekho.csv**: Raw dataset containing used car listings.
+- **cleaned_cars.csv**: Cleaned dataset after preprocessing.
+- **test1ML.ipynb**: Main Jupyter notebook with all code, analysis, and visualizations.
+- **readme**: Project documentation (this file).
+
+## Workflow Overview
+
+### 1. Data Loading & Initial Exploration
+- Load data using pandas.
+- Display basic info and the first few rows.
+- Check for missing values and data types.
+
+### 2. Data Cleaning
+- Handle missing values:
+  - Fill numerical columns with mean/median/mode as appropriate.
+  - Convert string columns to numeric where needed (e.g., `max_power`).
+- Remove duplicates.
+- Remove outliers (cars priced below 10,000 or above 5,000,000).
+- Standardize column names (lowercase, underscores).
+- Reset DataFrame index after cleaning.
+- Save cleaned data to `cleaned_cars.csv`.
+
+### 3. Feature Engineering
+- Create new features such as `car_age` (current year - year of manufacture).
+- Create `price_per_km` (selling price divided by mileage).
+
+### 4. Exploratory Data Analysis (EDA)
+- Visualize distributions (histograms, boxplots).
+- Analyze relationships (scatter plots, correlation heatmaps).
+- Group and aggregate data (e.g., average price by fuel type, year, transmission).
+- Identify most common brands and combinations.
+
+### 5. Modeling
+- **Linear Regression**: Predict selling price using features like year, km_driven, engine, max_power, and seats.
+- **Lasso & Ridge Regression**: Compare regularized models to handle multicollinearity and feature selection.
+- **Polynomial Regression**: Capture non-linear relationships.
+- **Model Evaluation**: Use metrics like R² and Mean Squared Error (MSE).
+- **Cross-Validation**: Assess model stability.
+- **GridSearchCV**: Tune hyperparameters (e.g., alpha for Ridge).
+
+### 6. Visualization
+- Plot predicted vs actual prices.
+- Visualize model assumptions (residual plots, Q-Q plots).
+- Show trends over years and by categories.
+
+
+## License
+
+This project is for educational purposes.
+
+---
+
+**Author:**
